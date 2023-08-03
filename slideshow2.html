@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>História</title>
+</head>
+<body>
+  
+</body>
+</html>
+<link rel="stylesheet" href="estilo.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-------------------------------  SLIDESHOW --------------------------->
+<div class="slideshow-container">
+
+  <div align="center" class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="81TnWHafWdL._AC_SL1448_.jpg" style="width:60%">
+    <div class="text">Capa do album: Californication</div>
+  </div>
+  
+  <div align="center" class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="bluewoman.png" style="width:60%">
+    <div class="text">Capa do album: By The Way</div>
+  </div>
+  
+  <div align="center" class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="rosewhiteface.png" style="width:60%">
+    <div class="text">Capa do album: Blood Sugar</div>
+  </div>
+  
+  <div align="center" class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="urso.png" style="width:60%">
+    <div class="text">Capa do album: The Getaway</div>
+  </div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+  <!------------------------- MENU -------------------->
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="slideshow2.html" class="active">História</a>
+    <a href="slideshow3.html">Discografia</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+<h1 align="center"> Red Hot Chili Peppers</h1>
+<p>Red Hot Chili Peppers (também conhecido como Chili Peppers, RHCP ou Red Hot) 
+é uma banda de rock dos Estados Unidos formada em Los Angeles, Califórnia, em
+1983. O estilo musical do grupo consiste principalmente no funk rock, bem como
+elementos de outros gêneros, tais como punk, rock alternativo, rap rock e rock
+psicodélico.[1] A banda é constituída pelos membros fundadores Anthony Kiedis
+(vocais) e Flea (baixo), juntamente com o baterista de longa data Chad Smith
+e o guitarrista John Frusciante.</p>
+<p>O álbum Blood Sugar Sex Magik foi o primeiro grande sucesso do grupo 
+lançado em 1991 e até hoje vendeu cerca de 14 milhões de cópias em todo 
+o mundo, além de estar entre os 200 melhores álbuns da história. 
+Durante a turnê desse álbum, John Frusciante deixou o grupo por ter lidado mal com
+o sucesso e seu vício em drogas aumentou, assim a banda recrutou Arik Marshall
+para concluir a turnê. Depois Dave Navarro entra na banda, gravando 
+One Hot Minute, os outros integrantes perceberam que ele não tinha o espírito
+eufórico da banda e ele por sua vez desliga-se dos Peppers. </p>
+<p>Embora bem sucedido comercialmente, o álbum não conseguiu se igualar 
+a aclamação crítica e popular de Blood Sugar Sex Magik, vendendo menos da
+metade que esse. Navarro saiu do grupo logo após a turnê. 
+John Frusciante, recém saído da reabilitação, voltou à banda em 1998 a
+pedido de Flea. Californication, By the Way e Stadium Arcadium 
+continuaram o sucesso do grupo. Depois de uma turnê 
+mundial, o grupo entrou em um hiato prolongado. Em 2009 John 
+Frusciante anunciou que estava deixando a banda amigavelmente
+para se concentrar em sua carreira solo e o guitarrista 
+Josh Klinghoffer o substituiu até o final de 2019, quando a
+banda anunciou o retorno de Frusciante. A banda lançou em 
+agosto de 2011 seu décimo álbum de estúdio I'm with You, que
+conseguiu ficar em primeiro lugar em 18 países. </p>
+<p>Em 2016, lançou seu décimo primeiro álbum de estúdio, The Getaway. 
+O álbum foiproduzido por Danger Mouse, marcando a primeira vez desde Mother's 
+Milk que o Red Hot Chili Peppers não trabalham com Rubin. O álbum
+liderou as paradas em dez países diferentes. Em janeiro de 2020,
+a banda estava em processo de produção do seu décimo segundo
+álbum de estúdio, Unlimited Love, que foi lançado em abril de 2022.
+</p>
+
+<!-------------------------------  JAVASCRIPT --------------------------->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<!------------------- Javascript 2 ------------------->
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html> 

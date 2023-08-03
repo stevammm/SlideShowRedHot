@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="estilo.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ 
+<!-------------------------------  SLIDESHOW --------------------------->
+<div align="center" class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="81TnWHafWdL._AC_SL1448_.jpg" style="width:60%">
+    <div class="text">Capa do album: Californication</div>
+  </div>
+  
+  <div align="center" class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="bluewoman.png" style="width:60%">
+    <div class="text">Capa do album: By The Way</div>
+  </div>
+  
+  <div align="center" class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="rosewhiteface.png" style="width:60%">
+    <div class="text">Capa do album: Blood Sugar</div>
+  </div>
+  
+  <div align="center" class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="urso.png" style="width:60%">
+    <div class="text">Capa do album: The Getaway</div>
+  </div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<!------------------------- MENU -------------------->
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="slideshow2.html">História</a>
+  <a href="slideshow3.html">Discografia</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<h1 align="center">SEUS ÚLTIMOS LANÇAMENTOS</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E1FNkf3MLKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>One of the most successful acts in rock history, Red Hot Chili Peppers, which
+is singer Anthony Kiedis, bassist Flea, drummer Chad Smith, and guitarist Josh Klinghoffer,
+have sold more than 60 million albums, including five multi-platinum LPs, and won six Grammy Awards,
+including “Best Rock Album” for Stadium Arcadium, “Best Rock Performance By a Duo or Group” for 
+“Dani California,” “Best Rock Song” for “Scar Tissue,” and “Best Hard Rock Performance With Vocal”
+for “Give It Away.”  The band was inducted into the Rock and Roll Hall of Fame in April 2012. 
+The Red Hot Chili Peppers" last studio album, The Getaway, was released by Warner Bros. Recordson June 17, 2016.</p>
+<!-------------------------------  JAVASCRIPT --------------------------->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<!------------------- Javascript 2 ------------------->
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+</body>
+</html> 
